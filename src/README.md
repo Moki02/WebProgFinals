@@ -16,7 +16,7 @@ Gallery - 90%
 Menu - 90%
 Testimonial - 90%
 Order Form - 0%
-Footer -0%
+Footer -90%
 Login / Register - 0%
 
 #Need to do

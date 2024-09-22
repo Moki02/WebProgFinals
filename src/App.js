@@ -7,7 +7,7 @@ import AboutUs from './AboutUs';
 import Gallery from './Gallery.js';
 import Menu from "./Menu.js";
 import Testimonial from './Testimonial.js';
-
+import Footer from './Footer.js';
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
       <Gallery />
       <Menu />
       <Testimonial />
-
+      <Footer />
     </div>
   );
 }
