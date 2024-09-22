@@ -8,6 +8,7 @@ import Gallery from './Gallery.js';
 import Menu from "./Menu.js";
 import Testimonial from './Testimonial.js';
 import Footer from './Footer.js';
+import Order from './Order.js';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Gallery />
       <Menu />
       <Testimonial />
+      <Order />
       <Footer />
     </div>
   );
