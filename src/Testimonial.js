@@ -3,12 +3,7 @@ import './App.css';
 
 
 const testimonials = [
-  {
-    text: "💯👍👍👍highly recommended.. its healthy because they offer veggie salad and onion rings.. variety of food choices🍟🍔🥙🍨.. cheap price for a real burger experience, friendly crews and its worth your 💰 money! I ordered here many times and never dissapoints me💗💗💗 yumm!",
-    name: "Guirit Calderon",
-    position: "Customer",
-    image: "images/person1.jpg",
-  },
+  
   {
     text: "Two thumbs up for their great tasting burgers!!! Thank you Hotguy Burgers & Salad for providing us with fantastic food and a wonderful service!",
     name: "Eliza Cristobal-Cruz",
@@ -56,15 +51,16 @@ const Testimonial = () => {
                       <span className="fa fa-quote-left"></span>
                     </div>
                     <div className="text">
-                      <p className="mb-4">{testimonial.text}</p>
+
                       <div className="d-flex align-items-center">
                         <div
                           className="user-img"
                           style={{ backgroundImage: `url(${testimonial.image})` }}
                         ></div>
                         <div className="pl-3">
+                          <p className="mb-4">{testimonial.text}</p>
                           <p className="name">{testimonial.name}</p>
-                          <span className="position">{testimonial.position}</span>
+
                         </div>
                       </div>
                     </div>

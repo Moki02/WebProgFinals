@@ -941,3 +941,100 @@
 }
 
 /******Footer Ends******/
+
+/******responsive******/
+
+
+/* Mobile Devices (max-width: 768px) */
+@media (max-width: 768px) {
+  /* Navbar */
+  .ftco-navbar-light {
+    top: 0; /* Adjust for mobile */
+    padding: 10px; /* Add padding for touch areas */
+  }
+  .ftco-navbar-light .navbar-brand {
+    font-size: 20px;
+  }
+  .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  /* Carousel */
+  .carousel .slide {
+    height: 400px; /* Smaller height for mobile */
+  }
+  .carousel .slidess .subheading {
+    font-size: 50px;
+  }
+  .carousel .slidess h1 {
+    font-size: 30px;
+  }
+
+  /* Featured Section */
+  .featured {
+    margin-top: 0;
+    padding: 20px;
+  }
+  .featured .featured-menus {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  /* Menu Section */
+  .menus .text {
+    width: 100%; /* Full width on mobile */
+    padding-left: 0;
+  }
+
+  /* Testimonial Section */
+  .testimony-wrap {
+    padding: 10px;
+  }
+
+  /* Gallery Section */
+  .gallery__pic img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Tablet Devices (max-width: 1024px) */
+@media (max-width: 1024px) {
+  /* Navbar */
+  .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  /* Carousel */
+  .carousel .slide {
+    height: 600px;
+  }
+  .carousel .slidess .subheading {
+    font-size: 100px;
+  }
+  .carousel .slidess h1 {
+    font-size: 40px;
+  }
+
+  /* Featured Section */
+  .featured .featured-menus {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  /* Menu Section */
+  .menus .text {
+    width: 80%; /* Smaller width for better spacing */
+    padding-left: 10px;
+  }
+
+  /* Testimonial Section */
+  .testimony-wrap {
+    padding: 20px;
+  }
+}

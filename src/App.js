@@ -9,6 +9,7 @@ import Menu from "./Menu.js";
 import Testimonial from './Testimonial.js';
 import Footer from './Footer.js';
 import Order from './Order.js';
+import Gallery2 from './Gallery2.js';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <Menu />
       <Testimonial />
       <Order />
+      <Gallery2/>
       <Footer />
     </div>
   );
