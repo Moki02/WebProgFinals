@@ -36,7 +36,7 @@
     margin-top: 55px;
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 50px;
 }
 
 .login-input {
@@ -55,7 +55,7 @@
 
 .login-input input {
     height: 50px;
-    width: 50px;
+    width: 300px;
     background: transparent;
     border: none;
     outline: none;

@@ -2,16 +2,20 @@
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
-
 /* *********NavBar****** */
 .ftco-navbar-light {
   background: transparent !important;
-  position: absolute;
-  top: 50px;
+  position: fixed;
+  top: 0;
   left: 0;
   right: 0;
   z-index: 3;
-  padding: 0;
+  padding: 50px;
+  transition: background 0.3s ease; /* Smooth transition for background color change */
+}
+
+.ftco-navbar-light.scrolled {
+  background: #fffbf2 !important;
 }
 
 .ftco-navbar-light .navbar-brand {
@@ -48,11 +52,11 @@
   color: #c10206;
 }
 
-.ftco-navbar-light.scrolled .nav-item.active > a {
+.ftco-navbar-light.scrolled .navbar-nav > .nav-item.active > a {
   color: #c8a97e !important;
 }
 
-.ftco-navbar-light.scrolled .nav-item.cta > a {
+.ftco-navbar-light.scrolled .navbar-nav > .nav-item.cta > a {
   color: #fffbf2 !important;
   background: #a50113;
   border: none !important;
@@ -65,19 +69,6 @@
   color: #010a10 !important;
 }
 
-.ftco-navbar-light.scrolled .nav-link.active {
-  color: #fffbf2 !important;
-}
-
-.ftco-navbar-light.scrolled.awake {
-  margin-top: 0px;
-  transition: 0.3s all ease-out;
-}
-
-.ftco-navbar-light.scrolled.sleep {
-  transition: 0.3s all ease-out;
-}
-
 .ftco-navbar-light.scrolled .navbar-brand {
   color: #010a10;
 }
@@ -85,6 +76,20 @@
 .navbar-brand {
   font-weight: 900;
   font-size: 25px;
+}
+
+/* Navbar for home page */
+.home-navbar {
+  background: transparent !important; /* Transparent when not scrolled */
+}
+
+.home-navbar-scrolled {
+  background: #fffbf2 !important; /* Light background after scroll */
+}
+
+/* Different styles for other pages */
+.other-navbar {
+  background: #333333 !important; /* Dark background for other pages */
 }
 
 /* *********carousel****** */
@@ -945,3 +950,66 @@
 
 /******Footer Ends******/
  
+/* ProductCard.css */
+
+.product-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 300px;
+  padding: 20px;
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px; /* Added height to maintain consistent image size */
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+  border-radius: 10px;
+}
+
+.product-card h3 {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.product-card p {
+  margin: 5px 0;
+  font-size: 16px;
+  color: #555;
+}
+
+.product-card button {
+  background-color: #a50113;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 16px;
+  transition: background-color 0.2s;
+}
+
+.product-card button:hover {
+  background-color: #c8a97e;
+}
+
+
+/* Cart page padding to account for fixed navbar */
+.cart-page {
+  margin-top: 300px; /* Adjust this value based on your navbar height */
+}
+
+/* Example: You can also apply padding if you prefer */
+.cart-page-content {
+  padding-top: 100px; /* Add space for the navbar */
+}
