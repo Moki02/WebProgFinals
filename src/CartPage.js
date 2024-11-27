@@ -34,6 +34,16 @@ const CartPage = ({ removeFromCart }) => {
     .filter(item => item && item.productId && item.productId.price != null)
     .reduce((acc, item) => acc + (item.productId.price * item.quantity), 0);
 
+  const handleRemove = async (productId) => {
+    try {
+      await removeFromCart(productId);
+      await fetchCart(); // Refresh cart after removal
+    } catch (error) {
+      console.error('Error removing item:', error);
+      setError('Failed to remove item from cart.');
+    }
+  };
+
   const handleBuyNow = async () => {
     try {
       const response = await fetch('http://localhost:5000/api/cart', {
@@ -44,7 +54,7 @@ const CartPage = ({ removeFromCart }) => {
         throw new Error('Failed to clear cart');
       }
   
-      setCart([]);  // Clears the cart on the frontend
+      setCart([]); // Clears the cart on the frontend
       setThankYouMessage('Thank you for buying! Please come again.');
     } catch (error) {
       console.error('Error clearing cart:', error);
@@ -70,7 +80,7 @@ const CartPage = ({ removeFromCart }) => {
                     {item.productId.name} - ₱{item.productId.price} x {item.quantity}
                   </span>
                   <button
-                    onClick={() => removeFromCart(item.productId._id)}
+                    onClick={() => handleRemove(item.productId._id)}
                     style={{ padding: '5px 10px', backgroundColor: '#a50113', color: '#fff', border: 'none', borderRadius: '4px', cursor: 'pointer' }}
                   >
                     Remove
